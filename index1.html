@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Gym | Best Fitness & Gymnastics in Barra, Kanpur</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --accent: #00f2ff; /* Aqua */
+            --accent-hover: #00d4e0;
+            --dark-bg: #0a1128; /* Deep Navy */
+            --navy-lighter: #162244;
+            --card-bg: #111d3d;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--dark-bg);
+            color: #ffffff;
+            scroll-behavior: smooth;
+        }
+        .font-heading {
+            font-family: 'Bebas Neue', cursive;
+        }
+        .accent-text { color: var(--accent); }
+        .accent-bg { background-color: var(--accent); }
+        
+        .hero-gradient {
+            background: linear-gradient(rgba(10, 17, 40, 0.8), rgba(10, 17, 40, 0.8)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .sticky-cta {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 50;
+            box-shadow: 0 4px 15px rgba(0, 242, 255, 0.3);
+        }
+
+        .service-card {
+            background-color: var(--card-bg);
+            border: 1px solid rgba(0, 242, 255, 0.1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 30px rgba(0, 242, 255, 0.1);
+        }
+
+        .glass-nav {
+            background: rgba(10, 17, 40, 0.9);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-link:hover {
+            color: var(--accent);
+        }
+
+        input, select, textarea {
+            background-color: rgba(255, 255, 255, 0.05) !important;
+            border: 1px solid rgba(0, 242, 255, 0.2) !important;
+            color: white !important;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: var(--accent) !important;
+            box-shadow: 0 0 0 2px rgba(0, 242, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="glass-nav fixed w-full z-40 top-0 border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="font-heading text-3xl tracking-wider"><span class="accent-text">ROCK</span> GYM</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="nav-link transition px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="#about" class="nav-link transition px-3 py-2 text-sm font-medium">About</a>
+                        <a href="#services" class="nav-link transition px-3 py-2 text-sm font-medium">Services</a>
+                        <a href="#timings" class="nav-link transition px-3 py-2 text-sm font-medium">Timings</a>
+                        <a href="#contact" class="accent-bg text-slate-900 px-6 py-2 rounded-full text-sm font-bold uppercase tracking-wide hover:brightness-110 transition shadow-lg">Join Now</a>
+                    </div>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white p-2">
+                        <i class="fa-solid fa-bars-staggered text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-50 bg-[#0a1128]/98 flex flex-col items-center justify-center space-y-8 text-2xl font-heading tracking-widest uppercase">
+        <button id="close-menu" class="absolute top-6 right-6 text-white text-3xl">&times;</button>
+        <a href="#home" class="mobile-link">Home</a>
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#services" class="mobile-link">Services</a>
+        <a href="#timings" class="mobile-link">Timings</a>
+        <a href="#contact" class="mobile-link accent-text">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient min-h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left w-full">
+            <div class="md:w-2/3">
+                <div class="inline-block px-4 py-1 border border-cyan-400/30 rounded-full mb-6 bg-cyan-400/5">
+                    <span class="accent-text text-sm font-bold uppercase tracking-widest">Barra's Premier Fitness Hub</span>
+                </div>
+                <h1 class="font-heading text-6xl md:text-8xl leading-none mb-4 animate-fade-in">
+                    ROCK GYM – <span class="accent-text">BUILD STRENGTH</span>,<br>BUILD CONFIDENCE
+                </h1>
+                <p class="text-xl md:text-2xl text-slate-300 mb-10 max-w-xl leading-relaxed">
+                    Elevate your training at the top-rated gym & gymnastics club in <span class="text-white font-semibold">Barra, Kanpur</span>. 
+                </p>
+                <div class="flex flex-col sm:flex-row gap-5 justify-center md:justify-start">
+                    <a href="#contact" class="accent-bg hover:brightness-110 text-slate-900 px-10 py-4 rounded-md font-bold text-lg transition uppercase tracking-wider shadow-xl shadow-cyan-900/20">Join Now</a>
+                    <a href="tel:07007613795" class="border-2 border-white/20 hover:border-cyan-400/50 hover:bg-white/5 text-white px-10 py-4 rounded-md font-bold text-lg transition uppercase tracking-wider">Book Free Trial</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-[#0a1128]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="font-heading text-4xl md:text-5xl mb-6">WHY CHOOSE <span class="accent-text">ROCK GYM?</span></h2>
+                    <p class="text-slate-400 text-lg leading-relaxed mb-6">
+                        Rock Gym is a clean, hygienic, and friendly fitness center in Barra, Kanpur. We specialize in creating a professional yet welcoming environment for everyone.
+                    </p>
+                    <p class="text-slate-400 text-lg leading-relaxed mb-8">
+                        Our members consistently highlight our positive community vibe and the meticulous maintenance of our equipment. From advanced powerlifting to beginner gymnastics, we have the space for you.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8">
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-shield-check accent-text text-xl"></i>
+                            <span class="font-semibold text-slate-200">Certified Trainers</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-sparkles accent-text text-xl"></i>
+                            <span class="font-semibold text-slate-200">Ultra-Clean Facility</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-users accent-text text-xl"></i>
+                            <span class="font-semibold text-slate-200">Supportive Community</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-medal accent-text text-xl"></i>
+                            <span class="font-semibold text-slate-200">Pro Gymnastics Mats</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-cyan-400 opacity-30"></div>
+                    <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gym Interior" class="rounded-lg shadow-2xl transition duration-500">
+                    <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-lg hidden lg:block shadow-2xl">
+                        <p class="text-3xl font-heading text-slate-900">5.0 ⭐</p>
+                        <p class="text-xs text-slate-500 uppercase font-bold tracking-tighter">Verified Local Reviews</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-[#070d1f]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="font-heading text-4xl md:text-5xl">PREMIUM <span class="accent-text">SERVICES</span></h2>
+                <div class="w-16 h-1 accent-bg mx-auto mt-4 rounded-full"></div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Gym Training -->
+                <div class="service-card p-10 rounded-2xl transition group">
+                    <div class="w-14 h-14 bg-cyan-400/10 flex items-center justify-center rounded-lg mb-8 group-hover:bg-cyan-400 transition duration-300">
+                        <i class="fa-solid fa-dumbbell text-2xl accent-text group-hover:text-slate-900 transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 uppercase tracking-tight">Gym Training</h3>
+                    <p class="text-slate-400 leading-relaxed">State-of-the-art resistance machines and free weights for all levels.</p>
+                </div>
+                <!-- Gymnastics -->
+                <div class="service-card p-10 rounded-2xl transition group">
+                    <div class="w-14 h-14 bg-cyan-400/10 flex items-center justify-center rounded-lg mb-8 group-hover:bg-cyan-400 transition duration-300">
+                        <i class="fa-solid fa-child text-2xl accent-text group-hover:text-slate-900 transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 uppercase tracking-tight">Gymnastics</h3>
+                    <p class="text-slate-400 leading-relaxed">Specialized floor work and apparatus training for agility and balance.</p>
+                </div>
+                <!-- Strength & Conditioning -->
+                <div class="service-card p-10 rounded-2xl transition group">
+                    <div class="w-14 h-14 bg-cyan-400/10 flex items-center justify-center rounded-lg mb-8 group-hover:bg-cyan-400 transition duration-300">
+                        <i class="fa-solid fa-gauge-high text-2xl accent-text group-hover:text-slate-900 transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 uppercase tracking-tight">Conditioning</h3>
+                    <p class="text-slate-400 leading-relaxed">Boost your metabolic rate and endurance with high-intensity training.</p>
+                </div>
+                <!-- Personal Training -->
+                <div class="service-card p-10 rounded-2xl transition group">
+                    <div class="w-14 h-14 bg-cyan-400/10 flex items-center justify-center rounded-lg mb-8 group-hover:bg-cyan-400 transition duration-300">
+                        <i class="fa-solid fa-user-check text-2xl accent-text group-hover:text-slate-900 transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 uppercase tracking-tight">Expert PT</h3>
+                    <p class="text-slate-400 leading-relaxed">Direct mentorship to help you smash your personal records safely.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timings Section -->
+    <section id="timings" class="py-20 bg-[#0a1128] border-y border-white/5">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="bg-gradient-to-br from-[#111d3d] to-[#0a1128] rounded-3xl p-10 md:p-16 text-center border border-cyan-400/10 shadow-2xl">
+                <h2 class="font-heading text-4xl mb-12">SESSION <span class="accent-text">TIMINGS</span></h2>
+                <div class="grid md:grid-cols-2 gap-10">
+                    <div class="space-y-2">
+                        <div class="text-cyan-400/50 text-xs font-bold uppercase tracking-widest">Early Birds</div>
+                        <h4 class="text-2xl font-bold text-white mb-1">Morning Session</h4>
+                        <p class="text-4xl font-heading text-white">06:00 AM – 12:00 PM</p>
+                    </div>
+                    <div class="hidden md:block w-px bg-white/10 mx-auto h-24"></div>
+                    <div class="space-y-2">
+                        <div class="text-cyan-400/50 text-xs font-bold uppercase tracking-widest">Evening Warriors</div>
+                        <h4 class="text-2xl font-bold text-white mb-1">Evening Session</h4>
+                        <p class="text-4xl font-heading text-white">05:00 PM – 10:00 PM</p>
+                    </div>
+                </div>
+                <div class="mt-12 text-slate-500 text-sm flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>Sunday: Closed for deep cleaning and recovery</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-24 bg-[#0a1128]">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="font-heading text-4xl text-center mb-16 underline decoration-cyan-400/30 underline-offset-8">THE <span class="accent-text">GALLERY</span></h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Equipment" class="rounded-xl aspect-[4/5] object-cover hover:scale-[1.02] transition duration-500 cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Training" class="rounded-xl aspect-[4/5] object-cover hover:scale-[1.02] transition duration-500 cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1534367507873-d2d7e24c797f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gymnastics Area" class="rounded-xl aspect-[4/5] object-cover hover:scale-[1.02] transition duration-500 cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Stronger" class="rounded-xl aspect-[4/5] object-cover hover:scale-[1.02] transition duration-500 cursor-pointer">
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="py-24 bg-[#070d1f]">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <h2 class="font-heading text-4xl md:text-5xl text-center md:text-left">MEMBER <span class="accent-text">TESTIMONIALS</span></h2>
+                <div class="flex items-center space-x-2 text-yellow-400">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <span class="text-white ml-2 text-sm font-bold">150+ Reviews</span>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-[#111d3d] p-10 rounded-2xl border-b-4 border-cyan-400/40">
+                    <p class="text-slate-300 mb-8 italic">"Very clean and hygienic gym. The trainers actually pay attention to your form!"</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-cyan-400 rounded-full flex items-center justify-center text-slate-900 font-bold">SK</div>
+                        <div>
+                            <div class="font-bold text-white">Sameer Khanna</div>
+                            <div class="text-xs accent-text font-bold uppercase">Member since 2022</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-[#111d3d] p-10 rounded-2xl border-b-4 border-cyan-400/40">
+                    <p class="text-slate-300 mb-8 italic">"Amazing gym with professional gymnastics training. Best in Barra hands down."</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-cyan-400 rounded-full flex items-center justify-center text-slate-900 font-bold">PS</div>
+                        <div>
+                            <div class="font-bold text-white">Priya Singh</div>
+                            <div class="text-xs accent-text font-bold uppercase">Gymnast</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-[#111d3d] p-10 rounded-2xl border-b-4 border-cyan-400/40">
+                    <p class="text-slate-300 mb-8 italic">"The vibe at Rock Gym is cool and motivating. Perfect for serious training."</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-cyan-400 rounded-full flex items-center justify-center text-slate-900 font-bold">AV</div>
+                        <div>
+                            <div class="font-bold text-white">Amit Verma</div>
+                            <div class="text-xs accent-text font-bold uppercase">Elite Member</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-[#0a1128]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-20">
+                <!-- Contact Info -->
+                <div>
+                    <h2 class="font-heading text-5xl mb-8 uppercase">LEAVE A <span class="accent-text">MESSAGE</span></h2>
+                    <p class="text-slate-400 mb-12 text-lg">Take the first step towards your transformation. Our team is ready to welcome you to the Rock Gym family.</p>
+                    
+                    <div class="space-y-10">
+                        <div class="flex items-start space-x-6">
+                            <div class="w-12 h-12 rounded-full border border-cyan-400/20 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-location-dot accent-text text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white uppercase tracking-wider text-sm mb-1">Location</h4>
+                                <p class="text-slate-400 leading-relaxed">Nameshvar Maha Mandir, Plot No 516, Varun Chowk, Barra 4, Kanpur, UP 208027</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-6">
+                            <div class="w-12 h-12 rounded-full border border-cyan-400/20 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-phone-volume accent-text text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white uppercase tracking-wider text-sm mb-1">Direct Line</h4>
+                                <p class="text-slate-400">070076 13795</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-14 flex flex-wrap gap-4">
+                        <a href="tel:07007613795" class="bg-cyan-400 text-slate-900 px-8 py-4 rounded-md flex items-center space-x-3 font-bold transition hover:scale-105">
+                            <i class="fa-solid fa-phone"></i> <span>Call Now</span>
+                        </a>
+                        <a href="https://wa.me/917007613795" class="bg-[#25D366] text-white px-8 py-4 rounded-md flex items-center space-x-3 font-bold transition hover:scale-105">
+                            <i class="fa-brands fa-whatsapp"></i> <span>WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Simple Form -->
+                <div class="bg-[#111d3d] p-10 rounded-3xl border border-white/5 shadow-2xl">
+                    <form id="contactForm" class="space-y-6">
+                        <div class="grid grid-cols-2 gap-4">
+                            <input type="text" placeholder="First Name" required class="w-full p-4 rounded-lg outline-none">
+                            <input type="text" placeholder="Last Name" required class="w-full p-4 rounded-lg outline-none">
+                        </div>
+                        <input type="tel" placeholder="Phone Number" required class="w-full p-4 rounded-lg outline-none">
+                        <select class="w-full p-4 rounded-lg outline-none cursor-pointer">
+                            <option>General Fitness Inquiry</option>
+                            <option>Gymnastics Coaching</option>
+                            <option>Personal Training Plan</option>
+                            <option>Membership Pricing</option>
+                        </select>
+                        <textarea rows="4" placeholder="How can we help you?" class="w-full p-4 rounded-lg outline-none"></textarea>
+                        <button type="submit" class="accent-bg w-full py-5 rounded-lg text-slate-900 font-bold uppercase tracking-widest hover:brightness-110 transition shadow-xl">Send Message</button>
+                    </form>
+                    <div id="formSuccess" class="hidden mt-6 p-4 bg-cyan-400/10 border border-cyan-400/30 rounded-lg text-cyan-400 font-semibold text-center">
+                        <i class="fa-solid fa-circle-check mr-2"></i> Message sent! We'll call you shortly.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div class="w-full h-80 relative">
+        <!-- Custom overlay to keep map readable with dark theme -->
+        <div class="absolute inset-0 pointer-events-none border-t border-white/5"></div>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3573.1812845455825!2d80.3015978!3d26.4172776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c47012674e76d%3A0xe5f99276d47b56f!2sRock%20Gym!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+            width="100%" 
+            height="100%" 
+            style="border:0; filter: contrast(1.2) grayscale(0.8) invert(0.9) hue-rotate(180deg);" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#050a1b] py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="font-heading text-4xl mb-6 tracking-widest"><span class="accent-text">ROCK</span> GYM</div>
+            <div class="flex justify-center space-x-8 mb-10 text-slate-500">
+                <a href="#home" class="hover:text-cyan-400 transition text-sm font-semibold uppercase tracking-tighter">Home</a>
+                <a href="#about" class="hover:text-cyan-400 transition text-sm font-semibold uppercase tracking-tighter">About</a>
+                <a href="#services" class="hover:text-cyan-400 transition text-sm font-semibold uppercase tracking-tighter">Services</a>
+                <a href="#contact" class="hover:text-cyan-400 transition text-sm font-semibold uppercase tracking-tighter">Contact</a>
+            </div>
+            <div class="flex justify-center space-x-6 mb-10">
+                <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-cyan-400/50 hover:text-cyan-400 transition"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-cyan-400/50 hover:text-cyan-400 transition"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-cyan-400/50 hover:text-cyan-400 transition"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            <p class="text-slate-600 text-xs tracking-widest uppercase">© 2024 Rock Gym Barra | Built for Strength & Confidence</p>
+        </div>
+    </footer>
+
+    <!-- Sticky CTA -->
+    <a href="#contact" class="sticky-cta accent-bg text-slate-900 font-bold px-8 py-4 rounded-full flex items-center space-x-3 md:hidden">
+        <i class="fa-solid fa-bolt-lightning"></i>
+        <span>JOIN NOW</span>
+    </a>
+
+    <script>
+        // Mobile Menu Logic
+        const mobileBtn = document.getElementById('mobile-menu-button');
+        const closeBtn = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+            document.body.classList.toggle('overflow-hidden');
+        }
+
+        mobileBtn.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
+        mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
+
+        // Form Submission Simulation
+        const form = document.getElementById('contactForm');
+        const successMsg = document.getElementById('formSuccess');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            form.classList.add('opacity-50', 'pointer-events-none');
+            setTimeout(() => {
+                form.reset();
+                form.classList.add('hidden');
+                successMsg.classList.remove('hidden');
+            }, 1000);
+        });
+
+        // Smooth scroll for anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
